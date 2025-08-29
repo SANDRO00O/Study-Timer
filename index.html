@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <title>Study Timer</title>
+  
+  <link rel="manifest" href="manifest.json" />
+  <meta name="theme-color" content="#2b8a5a">
+  
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <meta name="mobile-web-app-capable" content="yes">
+</head>
+
+<body>
+  <main class="container">
+    <section class="timer-body" aria-label="Study Timer Device">
+       <div class="screen-wrap">
+   <div class="digital-screen" role="status" aria-live="polite">
+     <div id="timeDisplay" class="time">00:00:00</div>
+     <div id="modeLabel" class="mode-label">Stopwatch</div>
+   </div>
+ </div>
+      <div class="top-row">
+        <div class="small-btns">
+          <button id="modeBtn" class="small-btn" title="Change mode">Mode</button>
+          <button id="lapBtn" class="small-btn" title="Lap / Set">Lap</button>
+          <button id="resetBtn" class="small-btn" title="Reset">Reset</button>
+        </div>
+      </div>
+      
+      
+      <button id="bigBtn" class="big-btn" aria-pressed="false">
+        <span id="bigBtnLabel">Start</span>
+      </button>
+      
+      
+      <div id="lapsPanel" class="laps-panel" aria-hidden="true">
+        <div class="laps-header">
+          <strong>Laps</strong>
+        </div>
+        <ol id="lapsList" class="laps-list"></ol>
+        <div class="laps-footer">
+          <button id="clearLaps" class="muted-btn">Clear</button>
+        </div>
+      </div>
+    </section>
+  </main>
+  <script src="assets/js/script.js" defer></script>
+</body>
+
+</html>
