@@ -32,7 +32,7 @@ body {
 }
 
 .timer-body {
-  width: min(420px, 94%);
+  width: min(420px, 95%);
   background: linear-gradient(180deg, #2b8a5a, #2a7a4e);
   border-radius: 28px;
   padding: 18px;
@@ -58,12 +58,10 @@ body {
   flex: 1;
   height: 54px;
   border-radius: 999px;
-  border: none;
   background: #daff60;
   font-weight: 600;
   font-size: 0.6rem;
   cursor: pointer;
-  transition: transform .08s ease, filter .12s;
 }
 
 .small-btn:active {
@@ -91,6 +89,7 @@ body {
   border-radius: 14px;
   text-align: center;
   color: #fff;
+  border: 1px solid #898989;
 }
 
 .time {
@@ -110,7 +109,6 @@ body {
   margin-top: 8px;
   height: 200px !important;
   border-radius: 16px;
-  border: none;
   background: #daff60;
   font-size: 1.05rem;
   font-weight: 800;
@@ -139,6 +137,7 @@ body {
   background: rgba(255, 255, 255, 0.12);
   color: #fff;
   cursor: pointer;
+  font-size: 0.5rem;
 }
 
 
@@ -155,6 +154,7 @@ body {
   display: flex;
   justify-content: space-between;
   margin-bottom: 8px;
+  font-size: 0.8rem;
 }
 
 .laps-list {
