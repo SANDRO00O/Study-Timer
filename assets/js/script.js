@@ -9,8 +9,6 @@
   const lapsPanel = document.getElementById('lapsPanel');
   const lapsList = document.getElementById('lapsList');
   const clearLaps = document.getElementById('clearLaps');
-  const closeLaps = document.getElementById('closeLaps');
-  const installBtn = document.getElementById('installBtn');
   
   const MODES = ['timer', 'pomodoro'];
   let modeIndex = 0;
@@ -73,6 +71,7 @@
       let li = document.createElement("li");
       li.textContent = `Lap ${i+1}: ${l}`;
       lapsList.appendChild(li);
+      lapsPanel.style.display = 'block';
     });
   }
   
@@ -89,27 +88,9 @@
     reset();
   };
   clearLaps.onclick = () => {
+    lapsPanel.style.display = 'none';
     laps = [];
     renderLaps();
   };
-  closeLaps.onclick = () => { lapsPanel.setAttribute("aria-hidden", "true"); };
-  
-  // PWA install
-  let deferredPrompt = null;
-  window.addEventListener('beforeinstallprompt', (e) => {
-    e.preventDefault();
-    deferredPrompt = e;
-    installBtn.hidden = false;
-  });
-  installBtn.onclick = async () => {
-    if (deferredPrompt) {
-      deferredPrompt.prompt();
-      deferredPrompt = null;
-      installBtn.hidden = true;
-    }
-  };
-  
-  if ('serviceWorker' in navigator) navigator.serviceWorker.register('/sw.js');
-  
-  update();
+
 })();

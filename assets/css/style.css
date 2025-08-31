@@ -21,6 +21,7 @@ body {
   user-select: none;
   user-zoom: none;
   font-size: 18px;
+  overflow: hidden;
 }
 
 .container {
@@ -32,7 +33,7 @@ body {
 }
 
 .timer-body {
-  width: min(420px, 95%);
+  width: 330px;
   background: linear-gradient(180deg, #2b8a5a, #2a7a4e);
   border-radius: 28px;
   padding: 18px;
@@ -148,6 +149,7 @@ body {
   border-radius: 12px;
   padding: 10px;
   color: #fff;
+  display: none;
 }
 
 .laps-header {
